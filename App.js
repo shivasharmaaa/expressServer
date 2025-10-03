@@ -1,14 +1,16 @@
 const express = require("express");
 const homeRouter = require("./routes/home");
-const studentRouter = require("./routes/student");
-const courseRouter = require("./routes/course");
+const cartRouter = require("./routes/cart");
+const userRouter = require("./routes/user");
+const productRouter = require("./routes/product");
 const app = express();
 
 app.use(express.json());
 
 app.use("/", homeRouter);
-app.use("/students", studentRouter);
-app.use("/courses", courseRouter);
+app.use("/users", userRouter);
+app.use("/products", productRouter);
+app.use("/cart", cartRouter);
 
 app.use((req, res) => {
   res.status(404).send("Page not found");
