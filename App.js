@@ -10,6 +10,10 @@ app.use(express.json());
 app.use("/", homeRouter);
 app.use("/products", productRouter);
 
+app.use("/users", userRouter);
+
+app.use("/cart", cartRouter);
+
 app.use((req, res) => {
   res.status(404).send("Page not found");
 });

@@ -1,16 +1,17 @@
-const getProductController = (req, res) => {
-  if (req.params.id) {
-    res.send(`Fetch a product with id :  ${req.params.id}`);
-  } else {
-    res.send("Fetch all products");
-  }
+const getAllProducts = (req, res) => {
+  res.send("Fetches all products");
 };
 
-const postProductController = (req, res) => {
+const addProduct = (req, res) => {
   res.send("Add a new Product");
 };
 
+const getProductById = (req, res) => {
+  res.send(`Fetching product with id  : ${req.params.id}`);
+};
+
 module.exports = {
-  getProductController,
-  postProductController,
+  getAllProducts,
+  addProduct,
+  getProductById,
 };
