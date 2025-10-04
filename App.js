@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 app.use("/", homeRouter);
-app.use("/products", productRouter);
+app.use("/api/products", productRouter);
 
 app.use((req, res) => {
   res.status(404).send("Page not found");
