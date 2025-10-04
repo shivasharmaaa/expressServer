@@ -8,7 +8,9 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"));
 app.use("/", homeRouter);
-app.use("/api/products", productRouter);
+app.use("/products", productRouter);
+app.use("/users", userRouter);
+app.use("/cart", cartRouter);
 
 app.use((req, res) => {
   res.status(404).send("Page not found");
