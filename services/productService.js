@@ -1,13 +1,10 @@
 const path = require("path");
-const getProducts = () => {
-  let filePath = path.join(__dirname, "..", "views", "product.html");
-  return filePath;
-};
-
-const addNewProduct = (req, res) => {
-  let msg = "Added a  new product";
+const getProducts = (obj) => {
+  let msg = "fetching all   products";
   return msg;
 };
+
+const addNewProduct = (req, res) => {};
 
 const getUserProductById = (req) => {
   let msg = `fethcing a product with id :${req.id}`;
